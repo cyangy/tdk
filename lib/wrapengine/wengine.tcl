@@ -72,7 +72,7 @@ proc tclapp::wrapengine::run {ev} {
     }
 
     set compressionState [SetCompression]
-    set license          BSD
+    set license          "## license  : BSD"
 
     Mount $kitfile errors
     if {[llength  $errors]} {
