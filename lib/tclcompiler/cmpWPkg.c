@@ -63,10 +63,16 @@ typedef struct CmdTable
     int exportIt;		/* if 1, export the command */
 } CmdTable;
 
+static int TdkLicenseObjCmd _ANSI_ARGS_((ClientData dummy, Tcl_Interp *interp,int objc, Tcl_Obj *CONST objv[]))
+{
+    return TCL_OK;
+}
+
 static CONST CmdTable commands[] =
 {
     { "compile",		Compiler_CompileObjCmd,			1 },
     { "getBytecodeExtension",	Compiler_GetBytecodeExtensionObjCmd,	1 },
+    { "tdk_license",            TdkLicenseObjCmd,                       1 },
     { "getTclVer",              Compiler_GetTclVerObjCmd,		1 },
     { 0, 0, 0 }
 };
