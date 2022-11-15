@@ -57,7 +57,7 @@ proc tlocate::find {tool} {
 
     set exe $tool
     if {$tcl_platform(platform) eq "windows"} {
-	append exe .exe
+	append exe {}
     }
 
     set selfdir [file dirname [info nameofexecutable]]
