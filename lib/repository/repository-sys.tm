@@ -30,6 +30,11 @@ proc ::repository::sys::basedir {} {
     return  $basedir
 }
 
+proc repository::sys::activestate {} {
+    variable basedir
+    return  "."
+}
+
 proc ::repository::sys::oldbasedir {} {
     variable oldbasedir
     return  $oldbasedir
