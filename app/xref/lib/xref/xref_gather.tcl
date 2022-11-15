@@ -9,7 +9,7 @@
 
 package require snit
 package require fileutil
-package require Memchan
+package require tcl::chan::memchan
 
 ## ::selfapp required
 

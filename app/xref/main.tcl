@@ -40,4 +40,4 @@ if {"unwrapped" eq [starkit::startup]} {
     source [file join $starkit::topdir ms.tcl]
 }
 
-go [file join $self xref.tcl]
+go [file join $self app xref xref.tcl]
