@@ -26,4 +26,4 @@ if {"unwrapped" eq [starkit::startup]} {
     source [file join $starkit::topdir ms.tcl]
 }
 
-go [file join $self tclsvc.tcl]
+go [file join $self app tclsvc tclsvc.tcl]
