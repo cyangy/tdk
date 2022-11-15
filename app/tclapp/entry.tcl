@@ -20,6 +20,7 @@
 # Dump stack
 #source [file join [pwd] [file dirname [file dirname [info script]]] dump_stack.tcl]
 
+set self [file dirname [file dirname [file dirname [file normalize [info script]]]]]
 
 package require starkit
 if {![info exists ::starkit::mode] || ("unwrapped" eq $::starkit::mode)} {
@@ -33,12 +34,12 @@ if {![info exists ::starkit::mode] || ("unwrapped" eq $::starkit::mode)} {
     starkit::startup
     lappend auto_path [file join [file dirname [file dirname $starkit::topdir]] devkit lib]
     lappend auto_path [file join [file dirname [file dirname $starkit::topdir]] lib]
-    lappend auto_path ~/TDK/lib
+#    lappend auto_path ~/TDK/lib
 #    tcl::tm::roots ~/TDK/lib
 
-    package require activestate::teapot::link
-    activestate::teapot::link::use ~/Abuild/lib/teapot-build
-    activestate::teapot::link::use ~/Abuild/lib/teapot-build-save-core
+#    package require activestate::teapot::link
+#    activestate::teapot::link::use ~/Abuild/lib/teapot-build
+#    activestate::teapot::link::use ~/Abuild/lib/teapot-build-save-core
 
     puts stderr unwrapped\n[join $auto_path \n\t]
 
@@ -47,7 +48,7 @@ if {![info exists ::starkit::mode] || ("unwrapped" eq $::starkit::mode)} {
 
     package require splash
     splash::configure -message DEVEL
-    splash::configure -imagefile ~/Abuild/images/splash.png
+    splash::configure -imagefile [file join $self artwork/splash.png]
 } else {
     # Wrapped standard actions.
     source [file join $starkit::topdir ms.tcl]

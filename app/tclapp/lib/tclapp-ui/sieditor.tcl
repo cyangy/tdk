@@ -279,6 +279,8 @@ snit::widget sieditor {
 	# inserting strings coming out of the license. However only if
 	# there is something to insert (in)to.
 
+	global   tcl_platform
+
 	if {[info exists origin(CompanyName)]} {
 	    set origin(CompanyName) $tcl_platform(user)@[info hostname]
 	}

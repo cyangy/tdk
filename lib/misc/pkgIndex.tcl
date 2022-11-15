@@ -5,6 +5,7 @@
 package ifneeded as::cache::async 0.1 "package provide as::cache::async 0.1;source [list [file join $dir as-cache-async.tm]]"
 package ifneeded as::cache::sync 0.1 "package provide as::cache::sync 0.1;source [list [file join $dir as-cache-sync.tm]]"
 package ifneeded as::tdk::komodo 0.1 "package provide as::tdk::komodo 0.1;source [list [file join $dir as-tdk-komodo.tm]]"
+package ifneeded as::tdk::obfuscated 0.1 "package provide as::tdk::obfuscated 0.1;source [list [file join $dir as-tdk-obfuscated.tm]]"
 package ifneeded event::merger 0.1 "package provide event::merger 0.1;source [list [file join $dir event-merger.tm]]"
 package ifneeded iter 0.1 "package provide iter 0.1;source [list [file join $dir iter.tm]]"
 package ifneeded jobs 0.1 "package provide jobs 0.1;source [list [file join $dir jobs.tm]]"
