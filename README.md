@@ -47,6 +47,10 @@ Simplify development with tools for finding and fixing bugs, managing complex co
      `main_std.tcl` into the app as `ms.tcl` and added the splash
      setup code referencing the wrapped image.
      
+# How to run
+Please refer [Run][1].
+
+[1]: https://github.com/cyangy/tdk/blob/master/Run.md
 # License
 
 Copyright (c) 2018 ActiveState Software
