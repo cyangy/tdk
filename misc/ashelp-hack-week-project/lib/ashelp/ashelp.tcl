@@ -12,7 +12,7 @@ package require struct::list
 package require tdom
 package require htmlparse ; # Entity mapping
 #Debug
-#package require fileutil::magic::mimetype
+#package require fileutil::magic::filetype
 #package require md5 2
 
 # ### ### ### ######### ######### #########
@@ -448,7 +448,7 @@ snit::type ashelp {
 	    $db transaction {
 		# Enter files and contents ...
 		foreach f $chunk {
-		    #puts [set mt [fileutil::magic::mimetype $f]]\t$f
+		    #puts [set mt [fileutil::magic::filetype $f]]\t$f
 
 		    set fx       [file join $anchor $f]
 		    set contents [fileutil::cat -translation binary $f]

@@ -715,7 +715,7 @@ proc ::tape::teapot::ExpandToDir {dst log} {
 
     set src $inputfile
 
-    set mtypes [fileutil::magic::mimetype $src]
+    set mtypes [fileutil::magic::filetype $src]
     if {[lsearch -exact $mtypes "application/zip"] >= 0} {
 	# Ad (1) Zip archive.
 

@@ -473,7 +473,7 @@ proc ::tclapp::pkg::wrapFile {pname pversion src dst} {
     #        as separate file, create pkgIndex for it.
     # (Ad 3) Generate pkgIndex for it and copy into dst dir
 
-    set mtypes [fileutil::magic::mimetype $src]
+    set mtypes [fileutil::magic::filetype $src]
     if {[lsearch -exact $mtypes "application/zip"] >= 0} {
 	# Ad (1) Zip archive.
 
